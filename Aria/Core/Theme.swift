@@ -2,6 +2,7 @@ import SwiftUI
 import UIKit
 
 @Observable
+@MainActor
 final class Theme {
     static let shared = Theme()
     private let key = "aria.theme.v1"
