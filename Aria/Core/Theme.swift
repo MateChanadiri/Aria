@@ -4,7 +4,7 @@ import UIKit
 @Observable
 @MainActor
 final class Theme {
-    static let shared = Theme()
+    @MainActor static let shared = Theme()
     private let key = "aria.theme.v1"
 
     var accent: Color = .red
@@ -118,6 +118,7 @@ final class Theme {
         var animationSpeed: Double
         var enabledTabs: [Tab]
 
+        @MainActor
         init(_ t: Theme) {
             accent = t.accent.toHex()
             background = t.background.toHex()
