@@ -4,6 +4,7 @@ import Observation
 import UIKit
 
 @Observable
+@MainActor
 final class Player {
     static let shared = Player()
 
