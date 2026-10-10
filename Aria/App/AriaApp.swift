@@ -1,6 +1,7 @@
 import SwiftUI
 
 @main
+@MainActor
 struct AriaApp: App {
     @State private var theme = Theme.shared
     @State private var player = Player.shared
